@@ -2,9 +2,8 @@
   "name": "@adaptive-streaming/worker",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "build": "tsc && npm run build:workflows",
-    "build:workflows": "node ./scripts/build-workflow-bundle.js",
+ "scripts": {
+    "build": "tsc",
     "dev": "npm run build && dotenv -e ../../.env -- node dist/worker.js",
     "start": "dotenv -e ../../.env -- node dist/worker.js"
   },
