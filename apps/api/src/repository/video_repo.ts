@@ -1,5 +1,5 @@
 import {prisma} from "../lib/prisma"
-
+import { ProcessingStatus } from "@adaptive-streaming/shared"
 export async function create_videoRecord(videoId:string,originalfilename?:string){
     return await prisma.video.create({
         data:{
@@ -9,7 +9,7 @@ export async function create_videoRecord(videoId:string,originalfilename?:string
         }
     })
 }
-export async function update_videoRecord(videoId:string, processingStatus:string){
+export async function update_videoRecord(videoId:string, processingStatus:ProcessingStatus){
     return await prisma.video.update({
         where:{videoId},
         data:{
