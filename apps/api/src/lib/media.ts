@@ -22,7 +22,7 @@ export function getOutputDirectory(videoId:string){
 export function getOutputRelativepath(videoId:string){
     return `output/${videoId}`
 }
-export function getOutputRelativePath(absolutePath:string){
+export function getuploadRelativePath(absolutePath:string){
     const relative_path= path.relative(path.resolve(config.mediaRoot),path.resolve(absolutePath));
     if(relative_path.startsWith('..') || path.isAbsolute(relative_path))throw new Error(`ivalide path`);
     return relative_path.split(path.sep).join("/");
